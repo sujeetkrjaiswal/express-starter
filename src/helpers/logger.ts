@@ -1,19 +1,19 @@
 import chalk from 'chalk'
 
-export const log = (...args) => {
-  console.log(...args)
+export const log = (...args: string[]) => {
+  console.log('Log : ', ...args)
 }
 
-export const logInfo = (...args) => {
-  log(chalk.bgBlueBright(...args))
+export const logInfo = (...args: string[]) => {
+  log(chalk.bgBlueBright('Info : ', ...args))
 }
 
-export const logError = (...args) => {
-  log(chalk.red(...args))
+export const logError = (...args: string[]) => {
+  log(chalk.red('Error : ', ...args))
 }
 
-export const logSuccess = (...args) => {
-  log(chalk.green(...args))
+export const logSuccess = (...args: string[]) => {
+  log(chalk.green('Success : ', ...args))
 }
 
 

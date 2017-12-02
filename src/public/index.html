@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Standalone Player</title>
+</head>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  #player-container {
+    width: 80%;
+    margin: auto;
+  }
+  #player {
+    width: 100%;
+    height: 500px;
+  }
+
+</style>
+
+<body>
+  <div id="player-container">
+    <iframe src="/content/preview/preview.html?webview=true" frameborder="0" id="player"></iframe>
+  </div>
+
+  <script>
+    document.onload = init();
+
+    function init() {
+      var player = document.getElementById('player');
+      player.onload = function () {
+        // alert('Player loaded!');
+        window.initializePreview = player.contentWindow.initializePreview;
+        var hardCodedData = {
+          "context": {
+            "mode": "play",
+            "contentId": "do_2123208084860108801778",
+            "sid": "qDkvYMRxj3Go0RwbmfYitWraudFRp7em",
+            "uid": "eb35ce9e-3407-468f-81fa-3f99e9a2f533",
+            "channel": "b00bc992ef25f1a9a8d63291e20efc8d",
+            "dims": ["ORG_001", "b00bc992ef25f1a9a8d63291e20efc8d"],
+            "app": ["sunbird.portal"],
+            "partner": []
+          },
+          "config": {
+            "showEndPage": false,
+            "showStartPage": true,
+            "host": "",
+            "apislug": "/action"
+          },
+          "metadata": {
+            "code": "org.sunbird.JaUlhe",
+            "methods": [],
+            "description": "Probability part  2 EM useful for Grade 10 class mutual eGrade 10clusive events  eGrade 10ample",
+            "language": ["English"],
+            "mimeType": "video/x-youtube",
+            "createdOn": "2017-08-29T11:09:02.140+0000",
+            "gradeLevel": ["Grade 10"],
+            "collections": [{
+              "identifier": "do_2123348366978908161311",
+              "name": "First collection",
+              "objectType": "Content",
+              "relation": "hasSequenceMember",
+              "description": "Test description",
+              "index": null,
+              "status": null,
+              "depth": null,
+              "mimeType": null,
+              "visibility": null,
+              "compatibilityLevel": null
+            }, {
+              "identifier": "do_2123844989142794241528",
+              "name": "Test -1",
+              "objectType": "Content",
+              "relation": "hasSequenceMember",
+              "description": "Many Lessons",
+              "index": null,
+              "status": null,
+              "depth": null,
+              "mimeType": null,
+              "visibility": null,
+              "compatibilityLevel": null
+            }, {
+              "identifier": "do_212347527484473344190",
+              "name": "oct-new-test",
+              "objectType": "Content",
+              "relation": "hasSequenceMember",
+              "description": "oct test course",
+              "index": null,
+              "status": null,
+              "depth": null,
+              "mimeType": null,
+              "visibility": null,
+              "compatibilityLevel": null
+            }],
+            "children": [],
+            "usesContent": [],
+            "artifactUrl": "https://www.youtube.com/embed/https://www.youtube.com/embed/HMMSFKzznOE?autoplay=1&enablejsapi=1",
+            "lastUpdatedOn": "2017-09-10T16:46:15.523+0000",
+            "contentType": "Story",
+            "item_sets": [],
+            "identifier": "do_2123208084860108801778",
+            "audience": ["Learner"],
+            "visibility": "Default",
+            "libraries": [],
+            "mediaType": "content",
+            "osId": "org.ekstep.quiz.app",
+            "ageGroup": ["Other"],
+            "languageCode": "en",
+            "versionKey": "1505061840317",
+            "concepts": [],
+            "createdBy": "98e09d6e-b95b-4832-bfab-421e63d36aa7",
+            "name": "13 PROBABILITY",
+            "status": "Live"
+          },
+          "data": {}
+        }
+        // hardCodedData.config.repos = ["/content-plugins/renderer"],
+        // hardCodedData.config.plugins = [{
+        //       "id": "org.sunbird.iframeEvent",
+        //       "ver": 1,
+        //       "type": "plugin"
+        //     }, {
+        //       "id": "org.sunbird.player.endpage",
+        //       "ver": 1,
+        //       "type": "plugin"
+        //     }];
+        window.initializePreview(hardCodedData);
+      }
+    }
+
+  </script>
+</body>
+
+</html>
